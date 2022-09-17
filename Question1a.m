@@ -1,9 +1,10 @@
-% Assignment 1 Q1
+%% Assignment 1 Q1
 
-%% find the maximum area of a triangle
+%% find the maximum area of a triangle using GSS method
 [af, bf, a_1, b_1] = GSS(21.02,39.98,0.001);
 % Maximum Area using GSS method
-MaxArea = AreaTri(mean([af,bf]))
+MaxArea = AreaTri(mean([af,bf]));
+disp(['Maxixum Area of the Triangle = ',num2str(MaxArea),' m^2'])
 
 %Graphical Test to verify the result
 x = linspace(20,40,1000);
