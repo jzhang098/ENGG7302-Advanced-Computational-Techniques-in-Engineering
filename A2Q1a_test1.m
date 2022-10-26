@@ -1,14 +1,14 @@
 %% Load File
 clc;
-load A;
-load b;
+A = rand(60,50);
+b = rand(60,1);
 %% Solve the system equation B = Ax + b
 % B is the mean of b
 B = mean(b)*ones(length(b),1);
 %Normal Way of solving
 x = pinv(A)*(B-b);
 subplot(211)
-plot(x);xlabel('Samples');grid on
+stem(x);xlabel('Samples');grid on
 title('Solved X using Pesudo-Inverse');
 
 %Using SVD
@@ -24,7 +24,7 @@ S_qinv1 = [S_qinv;
 invA = V*S_qinv1*U';%Pseudo inverse using SVD
 x_SVD = invA*(B-b);
 subplot(212)
-plot(x_SVD);xlabel('Samples');grid on
+stem(x_SVD);xlabel('Samples');grid on
 title('Solved X using SVD with low-rank approximation');
 condA = cond(U*S*V');
 formatSpec = 'Condition Number of a = %1.0f';

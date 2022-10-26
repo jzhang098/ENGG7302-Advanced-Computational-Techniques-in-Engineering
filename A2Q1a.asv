@@ -28,4 +28,4 @@ plot(x_SVD);xlabel('Samples');grid on
 title('Solved X using SVD with low-rank approximation');
 condA = cond(U*S*V');
 formatSpec = 'Condition Number of a = %1.0f';
-fprintf(formatSpec, condA)
+fprintf(formatSpec
