@@ -1,5 +1,5 @@
 # ENGG7302 Advanced Computational Techniques in Engineering
-The University of Queensland ENGG7302 Course Repo,
+ENGG7302 Course Repo,
 .m file starts with 'Question' is assignment 1
 .m file starts 'A2' is assignment 2
 
